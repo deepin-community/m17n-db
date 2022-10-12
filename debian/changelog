@@ -1,0 +1,269 @@
+m17n-db (1.8.0-3) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Boyuan Yang ]
+  * debian/control:
+    + Bump Standards-Version to 4.4.1.
+    + Bump debhelper compat to v12.
+
+  [ Norbert Preining ]
+  * More EWTS input table fixes.
+
+ -- Boyuan Yang <byang@debian.org>  Wed, 20 Nov 2019 18:46:06 -0500
+
+m17n-db (1.8.0-2) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Norbert Preining ]
+  * Fix EWTS input table errors (Closes: #941314)
+
+ -- Norbert Preining <norbert@preining.info>  Sun, 29 Sep 2019 23:03:48 +0900
+
+m17n-db (1.8.0-1) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Harshula Jayasuriya ]
+  * debian/control: delete transitional package m17n-contrib
+    (Closes: #878691).
+
+  [ Boyuan Yang ]
+  * New upstream version 1.8.0.
+  * debian: Apply "wrap-and-sort -abst".
+  * debian: Bump debhelper compat to v11.
+  * debian/watch: Update watch file correctly.
+  * debian/control:
+    + Add Debian Input Method Team as uploader.
+    + Bump Standards-Version to 4.2.1 (no changes needed).
+    + Use HTTPS url in Homepage field.
+    + Update Vcs-* fields and use git repo under input-method-team.
+  * debian/rules: Modernize and use the dh syntax.
+  * debian/copyright: Minor update to the url.
+  * debian/patches: Remove empty directory.
+
+ -- Boyuan Yang <byang@debian.org>  Fri, 19 Oct 2018 22:44:53 -0400
+
+m17n-db (1.7.0-2) unstable; urgency=low
+
+  * Mark packages as: Multi-Arch: foreign
+
+ -- Harshula Jayasuriya <harshula@debian.org>  Wed, 26 Aug 2015 02:35:16 +1000
+
+m17n-db (1.7.0-1) unstable; urgency=low
+
+  * New upstream release 1.7.0.
+  * debian/control:
+      - Add Build-Conflicts: locales-all (Closes: #791410).
+      - m17n-contrib update metadata (Closes: #762432).
+  * debian/copyright: updated
+  * debian/patches/00-fix-icon-location-Makefile-am.patch not required
+  * Update Standards-Version to Debian Policy 3.9.6. (No changes)
+
+ -- Harshula Jayasuriya <harshula@debian.org>  Fri, 21 Aug 2015 23:33:44 +1000
+
+m17n-db (1.6.5-1) unstable; urgency=low
+
+  * New upstream release 1.6.5.
+  * This upstream release conflicts/replaces m17n-contrib.
+    Creating a transitional dummy package for m17n-contrib.
+  * Update Standards-Version to Debian Policy 3.9.5. (No changes)
+  * Updated to debhelper 9.
+  * debian/control: update VCS URIs
+  * debian/control: suggest gawk for helper script tbl2mim.awk
+  * debian/rules: use dh_lintian
+  * Icon files were going into the wrong directory. Reported to upstream
+    and it is fixed in commit 36feb2544cef35e5bc5e7e0c008b7dbb719e30ef.
+    Backported the fix to 00-fix-icon-location-Makefile-am.patch.
+    To avoid autoreconf needing to be run each time this package is built,
+    I've extracted the relevant changes to Makefile.in and put them in
+    01-fix-icon-location-Makefile-in.patch.
+  * Explicitly run the upstream make clean (Closes: #719253).
+  * Upstream provides updated sa-harvard-kyoto.mim (Closes: #719251).
+
+ -- Harshula Jayasuriya <harshula@debian.org>  Sat, 03 May 2014 21:48:02 +1000
+
+m17n-db (1.6.4-1) unstable; urgency=low
+
+  * New upstream release 1.6.4.
+  * Upstream has moved to https://savannah.nongnu.org/projects/m17n.
+  * debian/copyright: update tarball location, homepage, copyright dates.
+
+ -- Harshula Jayasuriya <harshula@debian.org>  Sun, 09 Dec 2012 00:43:09 +1100
+
+m17n-db (1.6.3-2) unstable; urgency=low
+
+  * Update maintainer email address.
+  * Update Standards-Version to Debian Policy 3.9.3. (No changes)
+  * Fix debian-rules-missing-recommended-target.
+
+ -- Harshula Jayasuriya <harshula@debian.org>  Sat, 26 May 2012 00:43:59 +1000
+
+m17n-db (1.6.3-1) unstable; urgency=low
+
+  * New upstream release 1.6.3.
+  * Update Standards-Version to Debian Policy 3.9.2. (No changes)
+  * SINH-OTF.flt-add-kombu-deka.patch: drop, included in upstream.
+  * ta-lk-renganathan.mim.patch: drop, included in upstream.
+  * debian/control: no longer Recommend anthy, ispell, moved to m17n-lib-mimx.
+
+ -- Harshula Jayasuriya <harshula@gmail.com>  Sat, 15 Oct 2011 22:46:31 +1100
+
+m17n-db (1.6.2-2) unstable; urgency=low
+
+  * debian/control:
+      - break circular dependency (Closes: #604926).
+      - Recommends: anthy, ispell
+
+ -- Harshula Jayasuriya <harshula@gmail.com>  Sun, 06 Feb 2011 02:26:35 +1100
+
+m17n-db (1.6.2-1) unstable; urgency=low
+
+  * New upstream release 1.6.2.
+  * Update Standards-Version to Debian Policy 3.9.1. (No changes)
+  * Upstream has included German translation (Closes: #589151).
+  * debian/patches/si-wijesekera.mim.patch: drop, included in upstream.
+  * PATCH: upstream fix to ta-lk-renganathan.mim.
+  * PATCH: upstream fix to SINH-OFT.flt.
+
+ -- Harshula Jayasuriya <harshula@gmail.com>  Tue, 23 Nov 2010 01:39:29 +1100
+
+m17n-db (1.6.1-2) unstable; urgency=low
+
+  * UPSTREAM BUGFIX: si-wijesekera.mim: (map:preedit): Unhandle those keys
+    that belong to the map "starter" but not to "independent", "kombuva", nor
+    "dependent".
+  * Update Standards-Version to Debian Policy 3.9.0. (No changes)
+
+ -- Harshula Jayasuriya <harshula@gmail.com>  Mon, 19 Jul 2010 15:16:24 +1000
+
+m17n-db (1.6.1-1) unstable; urgency=low
+
+  * New upstream release 1.6.1. (Closes: #579896)
+  * Update Standards-Version to Debian Policy 3.8.4. (No changes)
+  * debian/source/format: 3.0 (quilt)
+  * debian/README.source: deleted
+  * debian/control:
+      - DM-Upload-Allowed: yes.
+      - Remove dpatch from Build-Depends.
+      - Depends: libm17n-0 >= 1.6.0.
+  * debian/rules: remove dpatch references
+  * debian/copyright: update dates
+
+ -- Harshula Jayasuriya <harshula@gmail.com>  Sat, 26 Jun 2010 04:29:35 +1000
+
+m17n-db (1.5.5-1) unstable; urgency=low
+
+  * New upstream release 1.5.5.
+  * Update Standards-Version to Debian Policy 3.8.2. (No changes)
+  * debian/control: add versioned Depends.
+  * debian/copyright: specify the version of the license file.
+  * debian/README.source: Created this file.
+  * debian/rules: upstream deleted si-wijesekera-preedit-alt.mim.
+
+ -- Harshula Jayasuriya <harshula@gmail.com>  Sat, 01 Aug 2009 23:55:15 +1000
+
+m17n-db (1.5.4-1) unstable; urgency=low
+
+  * New upstream release 1.5.4.
+  * Update Standards-Version to Debian Policy 3.8.1. (No changes)
+  * Remove patch: 01_backport_to_m17n-lib-1.5.2.dpatch
+  * debian/control: add "Build-Depends-Indep" as instructed by Lintian.
+  * debian/changelog: add a bit more detail to old changelog entries.
+  * debian/copyright: add the string "Copyright" as instructed by Lintian.
+  * debian/rules:
+      - replace dh_clean -k with dh_prep.
+      - do not package the obsolete si-wijesekera-preedit-alt.mim.
+
+ -- Harshula Jayasuriya <harshula@gmail.com>  Thu, 09 Apr 2009 22:03:37 +1000
+
+m17n-db (1.5.3-1) unstable; urgency=low
+
+  * New upstream release 1.5.3.
+  * Backport global.mim to be compatible with m17n-lib 1.5.2.
+
+ -- Harshula Jayasuriya <harshula@gmail.com>  Tue, 23 Dec 2008 22:18:46 +1100
+
+m17n-db (1.5.2-1) unstable; urgency=low
+
+  * New upstream release 1.5.2.
+  * Update Standards-Version to Debian Policy 3.8.0. (No changes)
+
+ -- Harshula Jayasuriya <harshula@gmail.com>  Tue, 22 Jul 2008 00:32:53 +1000
+
+m17n-db (1.5.1-1) unstable; urgency=low
+
+  * New upstream release 1.5.1. (Closes: #434043)
+  * debian/control: changed to Section: utils.
+  * debian/control: added dependency on libm17n-0.
+  * debian/copyright: updated the copyright dates and FSF address.
+  * debian/rules: add $(CROSS) support.
+  * Updated to debhelper 7.
+
+ -- Harshula Jayasuriya <harshula@gmail.com>  Mon, 23 Jun 2008 23:02:47 +1000
+
+m17n-db (1.3.4-3) unstable; urgency=low
+
+  * Change dependency on m17n-docs from a Depends to a Suggests.
+    (Closes: #466922)
+  * Add debian/patches/10_si_wijesekera.dpatch, backport si-wijesekera.mim
+    from 1.5.1.
+
+ -- Harshula Jayasuriya <harshula@gmail.com>  Thu, 06 Mar 2008 02:48:10 +1100
+
+m17n-db (1.3.4-2) unstable; urgency=low
+
+  * Add Depends: m17n-docs. (Closes: #465661)
+  * Add Lintian override for binary-without-manpage.
+
+ -- Harshula Jayasuriya <harshula@gmail.com>  Sun, 17 Feb 2008 18:46:50 +1100
+
+m17n-db (1.3.4-1) unstable; urgency=low
+
+  * New upstream release 1.3.4.
+  * New Maintainer.
+  * Update Standards-Version to Debian Policy 3.7.3. (No changes)
+  * Updated to debhelper 5.
+  * debian/control: remove dependency on cdbs
+  * debian/copyright: add homepage and copyright notice.
+  * debian/rules: stop using CDBS.
+  * Add debian/{docs,watch}.
+  * Delete m17n-db.install and obsolete patch.
+
+ -- Harshula Jayasuriya <harshula@gmail.com>  Thu, 14 Feb 2008 00:57:32 +1100
+
+m17n-db (1.3.1-1) unstable; urgency=low
+
+  * New upstream release
+  * Changed to use dpatch.
+  * Applied patch for tamil IM (Thanks to V Vivek <viyyer@sarai.net>)
+  (Closes: #349618).
+  * debian/watch: Removed because it does not work.
+  * Removed m17n-db.pc.
+
+ -- Hidetaka Iwai <tyuyu@debian.or.jp>  Wed,  1 Feb 2006 16:02:39 +0900
+
+m17n-db (1.2.0-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Hidetaka Iwai <tyuyu@debian.or.jp>  Tue, 28 Dec 2004 21:23:26 +0900
+
+m17n-db (1.1.0-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Hidetaka Iwai <tyuyu@debian.or.jp>  Thu, 26 Aug 2004 23:03:06 +0900
+
+m17n-db (1.0.2-2) unstable; urgency=low
+
+  * debian/control: Added the dependency on locales (closes: #250172).
+
+ -- Hidetaka Iwai <tyuyu@debian.or.jp>  Fri, 21 May 2004 22:47:07 +0900
+
+m17n-db (1.0.2-1) unstable; urgency=low
+
+  * Initial Release.  Close wnpp bug (closes: #244370).
+
+ -- Hidetaka Iwai <tyuyu@debian.or.jp>  Mon, 19 Apr 2004 20:48:20 +0900

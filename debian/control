@@ -1,0 +1,45 @@
+Source: m17n-db
+Section: utils
+Priority: optional
+Maintainer: Harshula Jayasuriya <harshula@debian.org>
+Uploaders:
+ Debian Input Method Team <debian-input-method@lists.debian.org>,
+Build-Depends:
+ debhelper-compat (= 12),
+Build-Depends-Indep:
+ locales,
+Build-Conflicts:
+ locales-all,
+Standards-Version: 4.4.1
+Homepage: https://www.nongnu.org/m17n/
+Vcs-Git: https://salsa.debian.org/input-method-team/m17n-db.git
+Vcs-Browser: https://salsa.debian.org/input-method-team/m17n-db
+
+Package: m17n-db
+Architecture: all
+Multi-Arch: foreign
+Depends:
+ ${misc:Depends},
+Conflicts:
+ m17n-contrib (<= 1.1.14-1),
+Recommends:
+ libm17n-0 (>= 1.6.0),
+Suggests:
+ gawk,
+ m17n-docs,
+Description: multilingual text processing library - database
+ The m17n library is a multilingual text processing library for the C
+ language.  This library has following features:
+  - The m17n library is an open source software.
+  - The m17n library for any Linux/Unix applications.
+  - The m17n library realizes multilingualization of many aspects of
+    applications.
+  - The m17n library represents multilingual text as an object named
+    M-text.  M-text is a string with attributes called text properties,
+    and designed to substitute for string in C.  Text properties carry any
+    information required to input, display and edit the text.
+  - The m17n library supports functions to handle M-texts.
+ .
+ m17n is an abbreviation of Multilingualization.
+ .
+ This package contains the database files used by m17n-lib.

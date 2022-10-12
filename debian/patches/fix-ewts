@@ -1,0 +1,33 @@
+---
+ MIM/bo-ewts.mim |    6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+--- m17n-db.orig/MIM/bo-ewts.mim
++++ m17n-db/MIM/bo-ewts.mim
+@@ -94,7 +94,7 @@ If 0, generate only decomposed character
+   ("rny" "རྙ")
+   ("rt" "རྟ")
+   ("rd" "རྡ")
+-  ("rn" "རྣ ")
++  ("rn" "རྣ")
+   ("rb" "རྦ")
+   ("rm" "རྨ")
+   ("rts" "རྩ")
+@@ -105,7 +105,7 @@ If 0, generate only decomposed character
+   ("lc" "ལྕ")
+   ("lj" "ལྗ")
+   ("lt" "ལྟ")
+-  ("ld" "སྡ")
++  ("ld" "ལྡ")
+   ("lp" "ལྤ")
+   ("lb" "ལྦ")
+   ("lh" "ལྷ")
+@@ -189,7 +189,7 @@ If 0, generate only decomposed character
+   ("brny" "བརྙ")
+   ("brt" "བརྟ")
+   ("brd" "བརྡ")
+-  ("brn" "བརྣ ")
++  ("brn" "བརྣ")
+   ("brts" "བརྩ")
+   ("brdz" "བརྫ")
+   ("brky" "བརྐྱ")
